@@ -1,0 +1,20 @@
+West University of Timisoara,Faculty of Mathematics and Computer Science,Mathematics,Lazar,Andrei,20,Colegiul National Pedagogic "Regina Maria",9.50
+West University of Timisoara,Faculty of Physics,Physics,Popescu,Mihai,21,Colegiul National "Mihai Eminescu",9.20  
+Politehnica University of Timisoara,Faculty of Mechanical Engineering,Mechanical Engineering,Ionescu,Andrei,22,Liceul Teoretic "Traian Vuia",8.75  
+University of Medicine and Pharmacy of Timisoara,Faculty of Pharmacy,Pharmacy,Radu,Elena,20,Liceul "Grigore Moisil",9.60  
+Banat University of Agricultural Sciences and Veterinary Medicine,Faculty of Agriculture,Environmental Engineering,Dumitrescu,Ioana,23,Colegiul Tehnic "Henri Coandă",8.90  
+Tibiscus University of Timisoara,Faculty of Computers and Applied Informatics,Computer Science,Georgescu,Cristian,21,Liceul de Informatica "Tiberiu Popoviciu",9.40  
+West University of Timisoara,Faculty of Mathematics and Computer Science,Mathematics,Marinescu,Alexandru,20,Colegiul National "C.D. Loga",9.35  
+Politehnica University of Timisoara,Faculty of Electronics and Telecommunications,Telecommunications,Stan,Ioana,22,Liceul Teoretic "Jean Monnet",8.85  
+University of Medicine and Pharmacy of Timisoara,Faculty of Dentistry,Dentistry,Moldovan,Andreea,21,Colegiul National "Mihai Viteazul",9.70  
+Banat University of Agricultural Sciences and Veterinary Medicine,Faculty of Horticulture,Agriculture,Popa,Florin,23,Liceul Agricol "Petru Rareș",8.80  
+Tibiscus University of Timisoara,Faculty of Economic Sciences,Business Administration,Vasile,Andrei,20,Liceul Economic "Virgil Madgearu",9.10  
+West University of Timisoara,Faculty of Law,Law,Iordache,Elena,21,Colegiul National "Tudor Vladimirescu",9.00  
+Politehnica University of Timisoara,Faculty of Civil Engineering,Civil Engineering,Enache,Daniel,22,Liceul Tehnologic "Dimitrie Leonida",8.95  
+University of Medicine and Pharmacy of Timisoara,Faculty of Medicine,Medicine,Niculescu,Simona,20,Colegiul National "Emil Racoviță",9.80  
+Banat University of Agricultural Sciences and Veterinary Medicine,Faculty of Veterinary Medicine,Veterinary Medicine,Roman,Adrian,23,Liceul Tehnologic "Ion Ionescu de la Brad",8.75  
+Tibiscus University of Timisoara,Faculty of Law and Public Administration,Governance Science,Dobre,Cristina,21,Liceul Teoretic "Grigore Moisil",9.20  
+West University of Timisoara,Faculty of Sociology and Psychology,Psychology,Petrescu,Andreea,21,Colegiul National "Gheorghe Lazar",9.40  
+Politehnica University of Timisoara,Faculty of Automation and Computers,Computers,Dumitru,Alex,22,Liceul Teoretic "Grigore Moisil",9.20  
+University of Medicine and Pharmacy of Timisoara,Faculty of Pharmacy,Pharmacy,Georgescu,Ioana,23,Colegiul National "Elena Cuza",9.65  
+Banat University of Agricultural Sciences and Veterinary Medicine,Faculty of Food Processing Technology,Food Processing Technology,Mihai,Cosmin,24,Liceul Tehnologic "Nicolae Balcescu",8.90  
