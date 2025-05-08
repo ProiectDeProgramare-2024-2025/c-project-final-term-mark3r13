@@ -57,43 +57,43 @@ void choose() {
 }
 
 void showUnis() {
-    printf("1.West Univesity of Timisoara\n");
-    printf("2.Politehnica University of Timisoara\n");
-    printf("3.University of Medicine and Pharmacy of Timisoara\n");
-    printf("4.Banat Univesity of Agricultural Sciences and Veterinary Medicine\n");
-    printf("5.Tibiscus University of Timisoara\n");
-    printf("6.Go back.\n\n");
+    printf("1. \033[94mWest University of Timisoara\033[0m\n");
+    printf("2. \033[94mPolitehnica University of Timisoara\033[0m\n");
+    printf("3. \033[94mUniversity of Medicine and Pharmacy of Timisoara\033[0m\n");
+    printf("4. \033[94mBanat University of Agricultural Sciences and Veterinary Medicine\033[0m\n");
+    printf("5. \033[94mTibiscus University of Timisoara\033[0m\n");
+    printf("6. \033[93mGo back\033[0m.\n\n");
     printf("Enter your choice: ");
 }
 
 int uni(int choice) {
     switch(choice) {
         case 1:
-            printf("You have chosen West University of Timisoara.\n\n");
+            printf("You have chosen \033[96mWest University of Timisoara\033[0m.\n\n");
             clearTerminal();
             return 1;
         case 2:
-            printf("You have chosen Politehnica University of Timisoara.\n\n");
+            printf("You have chosen \033[96mPolitehnica University of Timisoara\033[0m.\n\n");
             clearTerminal();
             return 2;
         case 3:
-            printf("You have chosen University of Medicine and Pharmacy of Timisoara.\n\n");
+            printf("You have chosen \033[96mUniversity of Medicine and Pharmacy of Timisoara\033[0m.\n\n");
             clearTerminal();
             return 3;
         case 4:
-            printf("You have chosen Banat University of Agricultural Sciences and Veterinary Medicine.\n\n");
+            printf("You have chosen \033[96mBanat University of Agricultural Sciences and Veterinary Medicine\033[0m.\n\n");
             clearTerminal();
             return 4;
         case 5:
-            printf("You have chosen Tibiscus University of Timisoara.\n\n");
+            printf("You have chosen \033[96mTibiscus University of Timisoara\033[0m.\n\n");
             clearTerminal();
             return 5;
         case 6:
-            printf("Going back...\n\n");
+            printf("\033[93mGoing back...\033[0m\n\n");
             clearTerminal();
             return 6;
         default:
-            printf("Invalid choice. Please try again.\n\n");
+            printf("\033[91mInvalid choice. Please try again.\033[0m\n\n");
             clearTerminal();
             return 6;
     }
@@ -136,7 +136,8 @@ int faculty(int choice) {
             printf("Enter your choice: ");
             choose();
             clearTerminal();
-            return choice;
+            if(choice >= 13) return -1;
+            else return choice;
         case 2:
             printf("Choose a faculty:\n");
             printf("1.Faculty of Automation and Computers\n");
@@ -155,7 +156,8 @@ int faculty(int choice) {
             printf("Enter your choice: ");
             choose();
             clearTerminal();
-            return choice;
+            if(choice >= 13) return -1;
+            else return choice;
         case 3:
             printf("Choose a faculty:\n");
             printf("1.Faculty of Medicine\n");
@@ -168,7 +170,8 @@ int faculty(int choice) {
             printf("Enter your choice: ");
             choose();
             clearTerminal();
-            return choice;
+            if(choice >= 7) return -1;
+            else return choice;
         case 4:
             printf("Choose a faculty:\n");
             printf("1.Faculty of Agriculture\n");
@@ -183,7 +186,8 @@ int faculty(int choice) {
             printf("Enter your choice: ");
             choose();
             clearTerminal();
-            return choice;
+            if(choice >= 9) return -1;
+            else return choice;
         case 5:
             printf("Choose a faculty:\n");
             printf("1.Faculty of Computers and Applied Informatics\n");
@@ -195,11 +199,12 @@ int faculty(int choice) {
             printf("Enter your choice: ");
             choose();
             clearTerminal();
-            return choice;
+            if(choice >= 6) return -1;
+            else return choice;
         default:
             printf("Invalid choice. Please try again.\n\n");
             clearTerminal();
-            return 6;
+            return -1;
     }
 }
 
@@ -507,70 +512,74 @@ const char* spec(int choice){
 }
 
 void showOpts() {
-    printf("1.Fill out a new form\n");
-    printf("2.View completed forms\n");
-    printf("3.View statistics\n");
-    printf("4.Exit\n\n");
+    printf("1.Fill out \033[31ma new form\033[0m\n");
+    printf("2.View \033[31mcompleted forms\033[0m\n");
+    printf("3.View \033[31mstatistics\033[0m\n");
+    printf("4.\033[32mExit\033[0m\n\n");
     printf("Enter your choice: ");
 }
 
 int addForm() {
-    printf("Add form?\n\n");
-    printf("1.Yes\n");
-    printf("2.No\n\n");
-    
+    printf("\033[36mAdd form?\033[0m\n\n");
+    printf("1. \033[32mYes\033[0m\n");
+    printf("2. \033[31mNo\033[0m\n\n");
+
     int addChoice;
     scanf("%d", &addChoice);
     getchar(); // Clear newline character from input buffer
 
     if(addChoice == 1) {
-        printf("Form added.\n\n");
+        printf("\033[92mForm added.\033[0m\n\n");
         getchar();
         clearTerminal();
         return 1;
     }
     else if(addChoice == 2) {
-        printf("Form not added.\n\n");
+        printf("\033[93mForm not added.\033[0m\n\n");
         getchar();
         clearTerminal();
+        ct--;
         return 2;
     }
     else {
-        printf("Invalid choice. Defaulting to option 2!\n\n");
+        printf("\033[91mInvalid choice. Defaulting to option 2!\033[0m\n\n");
         getchar();
         clearTerminal();
+        ct--;
         return 2;
     }
 }
 
 void form(formular *f) {
-    printf("Please fill out the following formular: \n");
-    printf("Name: ");
+    printf("\033[36mPlease fill out the following formular:\033[0m\n");
+
+    printf("\033[33mName:\033[0m ");
     scanf("%s", f->name);
 
-    printf("Surname: ");
+    printf("\033[33mSurname:\033[0m ");
     scanf("%s", f->surname);
 
-    printf("Age: ");
+    printf("\033[33mAge:\033[0m ");
     scanf("%d", &f->age);
 
-    printf("Graduated: ");
+    printf("\033[33mGraduated:\033[0m ");
     getchar(); 
     fgets(f->graduated, sizeof(f->graduated), stdin);
     f->graduated[strcspn(f->graduated, "\n")] = '\0';
 
-    printf("Baccalaureate average: ");
+    printf("\033[33mBaccalaureate average:\033[0m ");
     scanf("%f", &f->baccalaureate_avg);
 
     putchar('\n');
 
-    printf("Formular completed.\n\n");
+    printf("\033[92mFormular completed.\033[0m\n\n");
+
     int formChoice = addForm();
 
     if(formChoice == 1) {
         FILE *file = fopen("submissions.txt", "a");
         if (!file) {
-            printf("Error opening file for writing!\n");
+            printf("\033[31mError opening file for writing!\033[0m\n");
             return;
         }
 
@@ -587,28 +596,28 @@ void form(formular *f) {
 }
 
 void viewForms(int ct, formular *users) {
-    if(ct==0) {
-        printf("No forms have been completed yet.\n\n");
+    if(ct == 0) {
+        printf("\033[31mNo forms have been completed yet.\033[0m\n\n");
         printf("Press any key to continue...\n");
         getchar();
         clearTerminal();
     }
     else {
-        printf("View completed forms:\n\n");
-        for(int i=0; i<ct; i++) {
-            printf("=================Formular=%d==================\n",i);
-            printf("University: %s\n", users[i].university);
-            printf("Faculty: %s\n", users[i].faculty);
-            printf("Specialization: %s\n", users[i].specialization);
-            printf("Name: %s\n", users[i].name);
-            printf("Surname: %s\n", users[i].surname);
-            printf("Age: %d\n", users[i].age);
-            printf("Graduated: %s\n", users[i].graduated);
-            printf("Baccalaureate average: %.2f\n", users[i].baccalaureate_avg);
-            printf("=============================================\n\n");
+        printf("\033[36mView completed forms:\033[0m\n\n");
+        for(int i = 0; i < ct; i++) {
+            printf("\033[90m=================Formular=%d==================\033[0m\n", i);
+            printf("\033[33mUniversity:\033[0m \033[94m%s\033[0m\n", users[i].university);
+            printf("\033[33mFaculty:\033[0m \033[94m%s\033[0m\n", users[i].faculty);
+            printf("\033[33mSpecialization:\033[0m \033[94m%s\033[0m\n", users[i].specialization);
+            printf("\033[33mName:\033[0m \033[92m%s\033[0m\n", users[i].name);
+            printf("\033[33mSurname:\033[0m \033[92m%s\033[0m\n", users[i].surname);
+            printf("\033[33mAge:\033[0m \033[95m%d\033[0m\n", users[i].age);
+            printf("\033[33mGraduated:\033[0m \033[96m%s\033[0m\n", users[i].graduated);
+            printf("\033[33mBaccalaureate average:\033[0m \033[91m%.2f\033[0m\n", users[i].baccalaureate_avg);
+            printf("\033[90m=============================================\033[0m\n\n");
      
         }
-        printf("Press any key to continue...\n");
+        printf("\033[92mPress any key to continue...\033[0m\n");
         getchar();
         clearTerminal();
     }
@@ -627,15 +636,15 @@ int countForms(int ct, formular *users, const char* tUni, const char* tFac, cons
 void stats() {
     printf("View statistics:\n\n");
                 
-    printf("Type university name:\n");
+    printf("Type \033[32muniversity\033[0m name:\n");
     char tUni[100];
     fgets(tUni, sizeof(tUni), stdin);
     tUni[strcspn(tUni, "\n")] = '\0';
-    printf("Type faculty name:\n");
+    printf("Type \033[32mfaculty\033[0m name:\n");
     char tFac[100];
     fgets(tFac, sizeof(tFac), stdin);
     tFac[strcspn(tFac, "\n")] = '\0';
-    printf("Type specialization name:\n");
+    printf("Type \033[32mspecialization\033[0m name:\n");
     char tSpec[100];
     fgets(tSpec, sizeof(tSpec), stdin);
     tSpec[strcspn(tSpec, "\n")] = '\0';
@@ -644,12 +653,26 @@ void stats() {
     clearTerminal();
 
     int ctForms=countForms(ct, users, tUni, tFac, tSpec);
-    printf("Number of forms completed for %s, %s, %s: %d\n", tUni, tFac, tSpec, ctForms);
+    printf("Number of forms \033[92mcompleted\033[0m for \033[32m%s\033[0m, \033[32m%s\033[0m, \033[32m%s\033[0m: %d\n", tUni, tFac, tSpec, ctForms);
     putchar('\n');
 
-    printf("Press any key to continue...\n");
+    printf("\033[92mPress any key to continue...\033[0m\n");
     getchar();
     clearTerminal();
+}
+
+void header() {
+    for(int i = 0; i < 45; i++) {
+        if(i%2 == 0) printf("\033[91m=\033[0m");
+        else printf("\033[92m=\033[0m");
+    }
+    printf("\n");
+    printf("\033[92mWelcome to the University Application System!\n");
+    for(int i = 0; i < 45; i++) {
+        if(i%2 == 0) printf("\033[91m=\033[0m");
+        else printf("\033[92m=\033[0m");
+    }
+    printf("\n\n");
 }
 
 int main() {
@@ -657,6 +680,7 @@ int main() {
     insertSubmissions(users, &ct);
 
     while(1) {
+        header();
         showOpts();
         choose();
         putchar('\n');
@@ -664,7 +688,7 @@ int main() {
 
         switch(choice) {
             case 1:
-                printf("Choose an university:\n");
+                printf("Choose \033[31man university\033[0m:\n\n");
                 showUnis();
                 choose();
                 if(choice == 6) {
@@ -678,9 +702,17 @@ int main() {
 
                     if(choice<6) {
                         strncpy(users[ct].university, uniStr(choice), sizeof(users[ct].university));
+                    } else {
+                        clearTerminal();
+                        break;
                     }
 
                     choice = faculty(choice);
+
+                    if(choice == -1) {
+                        clearTerminal();
+                        break;
+                    }
 
                     facultyChoice(choice);
 
@@ -688,6 +720,9 @@ int main() {
 
                     if(choice<47) {
                         strncpy(users[ct].specialization, spec(choice), sizeof(users[ct].specialization));
+                    } else {
+                        clearTerminal();
+                        break;
                     }
 
                     form(&users[ct]);
@@ -703,11 +738,11 @@ int main() {
                 stats();
                 break;
             case 4:
-                printf("Exiting...\n");
+                printf("\033[92mExiting...\033[0m\n");
                 exit(0);
                 break;
             default: 
-                printf("Invalid choice. Please try again.\n");
+                printf("\033[31mInvalid choice. Please try again.\033[0m\n");
                 break;
         }
     }

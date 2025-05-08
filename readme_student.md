@@ -46,3 +46,15 @@ Assignment 3
  Implemented:
 
     -write to file any submission entered (perhaps asked? / new option)
+
+Assignment 4
+
+To be done:
+
+- Validations
+
+Done:
+
+- structs
+- functions
+- Colors
